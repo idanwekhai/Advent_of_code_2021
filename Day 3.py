@@ -46,7 +46,7 @@ def less_or_equal(seq):
     elif count_1 == count_0:
         return 0
 
-def keep_most_with_index(index, to_keep, seq):
+def keep_index(index, to_keep, seq):
     
     keep = []
     for i in range(len(seq)):
@@ -60,7 +60,7 @@ def get_oxygen_generator(seq1, index_to_consider = 0):
     
     most = most_or_equal(in_seq[index_to_consider])
 
-    new_seq = keep_most_with_index(index_to_consider, most, seq1)
+    new_seq = keep_index(index_to_consider, most, seq1)
 
     index_to_consider += 1
     if len(new_seq) == 1:
@@ -74,7 +74,7 @@ def get_co2_scrubber(seq1, index_to_consider = 0):
     
     less = less_or_equal(in_seq[index_to_consider])
 
-    new_seq = keep_most_with_index(index_to_consider, less, seq1)
+    new_seq = keep_index(index_to_consider, less, seq1)
 
     index_to_consider += 1
     if len(new_seq) == 1:
